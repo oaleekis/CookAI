@@ -1,7 +1,12 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
+
+import * as Animatable from 'react-native-animatable';
+
+import { useNavigation } from '@react-navigation/native';
 
 export default function Welcome() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
 
@@ -9,13 +14,14 @@ export default function Welcome() {
         <Image style={styles.logo} source={require('../../assets/WelcomeImage.jpg')} />
       </View>
 
-      <View style={styles.containerForm}>
+      <Animatable.View animation="fadeInUp" style={styles.containerForm}>
         <Text style={styles.title}>Crie suas receitas com apenas um Clique!</Text>
-        <Text style={styles.text}>Faça o login para começar</Text>
-        <TouchableOpacity style={styles.button}>
+        <Text style={styles.text}>Faça o login par
+          a começar</Text>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SignIn')}>
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
-      </View>
+      </Animatable.View>
 
     </View>
   )
