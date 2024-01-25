@@ -16,7 +16,7 @@ export default function SignIn() {
         <TextInput placeholder='Digite seu e-mail...' placeholderTextColor="#fff" style={styles.input} />
 
         <Text style={styles.title}>Senha</Text>
-        <TextInput placeholder='Digite sua senha...' placeholderTextColor="#fff" style={styles.input} />
+        <TextInput placeholder='Digite sua senha...' secureTextEntry={true} placeholderTextColor="#fff" style={styles.input} />
 
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Entrar</Text>
