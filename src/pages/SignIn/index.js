@@ -3,7 +3,10 @@ import React from 'react'
 
 import * as Animatable from 'react-native-animatable';
 
+import { useNavigation } from '@react-navigation/native';
+
 export default function SignIn() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Animatable.View animation="fadeInLeft" deLay={500} style={styles.containerHeader}>
@@ -18,7 +21,7 @@ export default function SignIn() {
         <Text style={styles.title}>Senha</Text>
         <TextInput placeholder='Digite sua senha...' secureTextEntry={true} placeholderTextColor="#fff" style={styles.input} />
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HomeScreen')}>
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
 
