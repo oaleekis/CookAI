@@ -1,20 +1,20 @@
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 
-const RecipeList = ({  }) => {
+const RecipeList = ({ }) => {
   return (
     <View>
-      <Text>Suas Receitas: aqui</Text>
-      <FlatList>
-
-        
-            <Text>teste</Text>
-     
-
-      </FlatList>
-      
+      <Text style={styles.message}>Suas Receitas:</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  message: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#f06035'
+  },
+});
 
 export default RecipeList;
