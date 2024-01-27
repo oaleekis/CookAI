@@ -10,12 +10,11 @@ export default function Register() {
     return (
         <View style={styles.container}>
             <Animatable.View animation="fadeInLeft" deLay={500} style={styles.containerHeader}>
-                <Text style={styles.message}>Seja bem vindo!</Text>
+                <Text style={styles.message}>Crie sua conta</Text>
             </Animatable.View>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
 
-                <Text style={styles.messageForm}>Crie sua conta</Text>
                 <TextInput placeholder='Nome' placeholderTextColor="#fff" style={styles.input} />
 
                 <TextInput placeholder='Sobrenome' placeholderTextColor="#fff" style={styles.input} />
@@ -50,7 +49,6 @@ const styles = StyleSheet.create({
     },
     messageForm: {
         fontSize: 28,
-        marginBottom: 50,
         fontWeight: 'bold',
         color: '#fff',
     },
@@ -61,18 +59,14 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 25,
         paddingStart: '5%',
         paddingEnd: '5%',
-        justifyContent: 'center',
-    },
-    title: {
-        fontSize: 20,
-        color: '#fff',
+        paddingTop: 20
     },
     input: {
         borderWidth: 1,
         borderColor: '#fff',
         borderRadius: 10,
-        padding: 20,
-        marginBottom: 50,
+        padding: 15,
+        marginBottom: 20,
         fontSize: 18,
         fontWeight: 'bold',
         color: '#fff'
@@ -87,7 +81,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: '#f06035',
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: 'bold',
     },
 

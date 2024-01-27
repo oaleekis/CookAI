@@ -16,8 +16,7 @@ export default function Welcome() {
 
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
         <Text style={styles.title}>Crie suas receitas com apenas um Clique!</Text>
-        <Text style={styles.text}>Faça o login par
-          a começar</Text>
+        <Text style={styles.text}>Faça o login para começar</Text>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SignIn')}>
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
@@ -73,7 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 20,
     color: '#f06035',
     fontWeight: 'bold'
   }

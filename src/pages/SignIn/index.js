@@ -10,16 +10,14 @@ export default function SignIn() {
   return (
     <View style={styles.container}>
       <Animatable.View animation="fadeInLeft" deLay={500} style={styles.containerHeader}>
-        <Text style={styles.message}>Bem-vindo(a)</Text>
+        <Text style={styles.message}>Bem-vindo!</Text>
       </Animatable.View>
 
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
 
-        <Text style={styles.title}>E-mail</Text>
-        <TextInput placeholder='Digite seu e-mail...' placeholderTextColor="#fff" style={styles.input} />
+        <TextInput placeholder='E-mail' placeholderTextColor="#fff" style={styles.input} />
 
-        <Text style={styles.title}>Senha</Text>
-        <TextInput placeholder='Digite sua senha...' secureTextEntry={true} placeholderTextColor="#fff" style={styles.input} />
+        <TextInput placeholder='Senha' secureTextEntry={true} placeholderTextColor="#fff" style={styles.input} />
 
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HomeScreen')}>
           <Text style={styles.buttonText}>Entrar</Text>
@@ -56,32 +54,29 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 25,
     paddingStart: '5%',
     paddingEnd: '5%',
-  },
-  title: {
-    fontSize: 20,
-    marginTop: 28,
-    color: '#fff',
+    paddingTop: 20
   },
   input: {
-    borderBottomWidth: 1,
-    borderBottomColor: '#fff',
-    height: 40,
-    marginBottom: 12,
-    fontSize: 16,
+    borderWidth: 1,
+    borderColor: '#fff',
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 20,
+    fontSize: 18,
+    fontWeight: 'bold',
     color: '#fff'
-  },
+},
   button: {
     backgroundColor: '#fff',
     width: '100%',
     borderRadius: 4,
     paddingVertical: 8,
-    marginTop: 14,
     justifyContent: 'center',
     alignItems: 'center'
   },
   buttonText: {
     color: '#f06035',
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   buttonRegister: {
